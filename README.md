@@ -13,7 +13,7 @@ This is a backend RESTful API built with **Node.js**, **Express**, and **MongoDB
 ## 🧪 Setup Instructions
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Balaji-R-05/learning-progress-tracker.git
 cd learning-progress-tracker
 npm install
 # Fill in your Mongo URI and JWT secret in .env
