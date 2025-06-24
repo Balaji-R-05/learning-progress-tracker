@@ -1,9 +1,9 @@
-const express = require('express');
-const { protect } = require('../middlewares/authMiddleware');
-const { generateCertificate } = require('../controllers/certificateController');
+import express from 'express';
+import { protect } from '../middlewares/authMiddleware.js';
+import { generateCertificate } from '../controllers/certificateController.js';
 
 const router = express.Router();
 
 router.get('/certificate/:courseId', protect, generateCertificate);
 
-module.exports = router;
+export default router;

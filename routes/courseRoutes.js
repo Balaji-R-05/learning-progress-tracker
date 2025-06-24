@@ -1,11 +1,11 @@
-const express = require('express');
-const {
+import express from 'express';
+import {
   createCourse,
   getCourses,
   updateCourse,
   deleteCourse
-} = require('../controllers/courseController');
-const { protect, adminOnly } = require('../middlewares/authMiddleware');
+} from '../controllers/courseController.js';
+import { protect, adminOnly } from '../middlewares/authMiddleware.js';
 
 const router = express.Router();
 
@@ -17,4 +17,4 @@ router.post('/', protect, adminOnly, createCourse);
 router.put('/:id', protect, adminOnly, updateCourse);
 router.delete('/:id', protect, adminOnly, deleteCourse);
 
-module.exports = router;
+export default router;
