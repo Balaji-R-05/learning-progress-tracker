@@ -39,7 +39,7 @@ app.use('/api', profileRoutes);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.get('/', (req, res) => {
-  res.send('✅ DevifyX API is running!');
+  res.send('✅ Dev API is running!');
 });
 
 mongoose
