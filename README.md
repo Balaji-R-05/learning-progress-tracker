@@ -24,7 +24,7 @@ This is a backend RESTful API built with **Node.js**, **Express**, and **MongoDB
 
 ## ⚙️ Tech Stack
 
-| Category       | Stack                        |
+|  **Category**  | **Stack**                    |
 |----------------|------------------------------|
 | Runtime        | Node.js                      |
 | Framework      | Express.js                   |
@@ -35,7 +35,15 @@ This is a backend RESTful API built with **Node.js**, **Express**, and **MongoDB
 | Emails         | Nodemailer                   |
 | Docs           | Swagger (OpenAPI)            |
 
-## Setup Environment Variables
+## Quick Start
+
+### Clone repo
+```bash
+git clone https://github.com/Balaji-R-05/learning-progress-tracker.git
+cd learning-progress-tracker
+npm install
+```
+
 ### Create a .env file in the root:
 ```
 PORT=5000
@@ -46,14 +54,4 @@ EMAIL_PASS=your_email_password
 ```
 
 ### Run the Server
-```
-npm run dev
-```
 Server will start on: http://localhost:5000
-
-```bash
-git clone https://github.com/Balaji-R-05/learning-progress-tracker.git
-cd learning-progress-tracker
-npm install
-npm run dev
-```
