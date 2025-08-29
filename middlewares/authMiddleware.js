@@ -1,6 +1,8 @@
 import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
 
+
+// Middleware to protect routes (requires valid JWT)
 export const protect = async (req, res, next) => {
   let token;
 
@@ -13,6 +15,10 @@ export const protect = async (req, res, next) => {
 
   if (!token) {
     return res.status(401).json({ message: 'Authorization token missing' });
+  }
+
+  if (!process.env.JWT_SECRET) {
+    return res.status(500).json({ success: false, message: 'JWT secret not configured' });
   }
 
   try {
@@ -30,6 +36,7 @@ export const protect = async (req, res, next) => {
   }
 };
 
+// Middleware for admin-only routes
 export const adminOnly = (req, res, next) => {
   if (req.user?.role !== 'admin') {
     return res.status(403).json({ message: 'Admin access required' });

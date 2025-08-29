@@ -17,6 +17,11 @@ This is a backend RESTful API built with **Node.js**, **Express**, and **MongoDB
 - ✅ Swagger Documentation
 - ✅ Postman Collection
 
+## 🚀 Future Improvements
+
+- Add unit and integration tests
+- Implement password reset functionality
+
 ## ⚙️ Tech Stack
 
 | Category       | Stack                        |
@@ -43,15 +48,6 @@ EMAIL_PASS=your_email_password
 npm run dev
 ```
 Server will start on: http://localhost:5000
-
-
-
-
-
-
-
-
-
 
 ```bash
 git clone https://github.com/Balaji-R-05/learning-progress-tracker.git

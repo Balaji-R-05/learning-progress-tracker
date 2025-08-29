@@ -23,6 +23,11 @@ export const updateProfile = async (req, res) => {
     const user = await User.findByIdAndUpdate(req.user._id, updateData, { new: true });
     res.status(200).json({ success: true, data: user });
   } catch (err) {
-    res.status(500).json({ success: false, message: 'Failed to update profile' });
+    console.error('Profile update error:', err);
+    res.status(500).json({
+      success: false,
+      message: 'Failed to update profile. Please try again later.',
+      error: err.message
+    });
   }
 };

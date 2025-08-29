@@ -1,6 +1,6 @@
 import User from '../models/User.js';
 import jwt from 'jsonwebtoken';
-import sendEmail from '../utils/sendEmail.js'; // now imports a function
+import sendEmail from '../utils/sendEmail.js';
 
 // Generate JWT token
 const generateToken = (user) => {

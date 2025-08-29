@@ -7,7 +7,6 @@ export const createCourse = async (req, res) => {
   if (!title || !description) {
     return res.status(400).json({ success: false, message: "Missing title or description" });
   }
-
   try {
     const course = await Course.create({ title, description, modules });
     res.status(201).json({ success: true, data: course });
@@ -34,7 +33,6 @@ export const updateCourse = async (req, res) => {
   if (!title && !description && !modules) {
     return res.status(400).json({ success: false, message: "At least one field is required for update" });
   }
-
   try {
     const course = await Course.findByIdAndUpdate(id, { title, description, modules }, { new: true });
     if (!course) {
