@@ -37,11 +37,13 @@ This is a backend RESTful API built with **Node.js**, **Express**, and **MongoDB
 
 ## Setup Environment Variables
 ### Create a .env file in the root:
+```
 PORT=5000
 MONGO_URI=<mongodb::connection_string>
 JWT_SECRET=your_jwt_secret
 EMAIL_USER=your_email@example.com
 EMAIL_PASS=your_email_password
+```
 
 ### Run the Server
 ```
